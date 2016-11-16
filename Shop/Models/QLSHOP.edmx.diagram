@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1386ecb88f25400783b2b6f91cafb9ab" Name="Diagram1" ZoomLevel="70">
+        <EntityTypeShape EntityType="QLShopOnlineModel.ChiTietDonDatHang" PointX="5.25" PointY="6" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.ChiTietPhieuNhap" PointX="5.25" PointY="10.125" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.DonDatHang" PointX="3" PointY="0.75" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.LoaiSanPham" PointX="0.75" PointY="3.25" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.MaLoaiSanPham" PointX="0.75" PointY="6.125" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.PhieuNhap" PointX="3" PointY="11.5" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.Slider" PointX="7.75" PointY="5.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.sysdiagram" PointX="7.75" PointY="2.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.ThanhVien" PointX="7.75" PointY="8.375" Width="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.TinTuc" PointX="5.75" PointY="2.375" Width="1.5" IsExpanded="true" />
+        <AssociationConnector ManuallyRouted="false" Association="QLShopOnlineModel.FK_ChiTietDonDatHang_DonDatHang" />
+        <AssociationConnector ManuallyRouted="false" Association="QLShopOnlineModel.FK_ChiTietPhieuNhap_ToPhieuNhap" />
+        <AssociationConnector ManuallyRouted="false" Association="QLShopOnlineModel.FK_PhieuNhap_ToMaLoaiSanPham" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.KhachHang" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="QLShopOnlineModel.FK_DonDatHang_KhachHang" />
+        <EntityTypeShape EntityType="QLShopOnlineModel.SanPham" Width="1.5" PointX="3" PointY="5.5" />
+        <AssociationConnector Association="QLShopOnlineModel.FK_ChiTietDonDatHang_SanPham" />
+        <AssociationConnector Association="QLShopOnlineModel.FK_ChiTietPhieuNhap_ToSanPham" />
+        <AssociationConnector Association="QLShopOnlineModel.FK_SanPham_ToLoaiSanPham" />
+        <AssociationConnector Association="QLShopOnlineModel.FK_SanPham_MaLoaiSanPham" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Shop.Models.SanPham>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    
+}
+
+<div class="content-page about">
+    <!--SECTION-->
+    <div class="section">
+        <div class="section-title"><h1>Kết quả tìm kiếm</h1></div>
+    </div>
+    <!--/SECTION-->
+    <!--SECTION-->
+    <div class="section">
+       
+        @for (var i = 1; i < Model.Count(); i++)
+        {   
+        <div class="section-box search-result">
+            <a class="search-link" href="@Url.Action("Details", "Home", new { id = Model.ElementAt(i).IdSanPham })">
+                <span class="number">@i</span>
+                <div class="item-search">
+                    <div class="item-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@Model.ElementAt(i).HinhAnh" alt=""></div><div class="item-text"><p>@Model.ElementAt(i).TenSanPham</p></div>
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>

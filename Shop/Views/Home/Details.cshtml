@@ -1,0 +1,147 @@
+﻿@model Shop.Models.SanPham
+@{
+    ViewBag.Title = Model.TenSanPham;
+    Layout = "~/Views/Shared/_LayoutDetails.cshtml";
+}
+<div class="content-page product-details">
+    <!--SECTION-->
+    <div class="section">
+        <div class="section-title"><h1>@ViewBag.TenLoai</h1></div>
+    </div>
+    <!--/SECTION-->
+    <!--SECTION-->
+    <div class="section">
+        <div class="product-nav">
+        </div>
+    </div>
+    <!--/SECTION-->
+    <div class="show-ajax-detail">
+        <!--SECTION-->
+        <div class="section">
+            <!--INFO-->
+            <div class="info-product">
+                <!--INFO TITLE-->
+                <h3>@Model.TenSanPham</h3>
+                <!--/INFO TITLE-->
+                <!--INFO TEXT-->
+                <div class="info-box">
+                    <div class="info-left">
+                        @Html.Raw(Model.MoTa)
+                    </div>
+                    <div class="info-right">
+                        <div class="price">
+                            <sub>VND</sub>
+                            <span class="sale-price">@string.Format("{0:#,##0}",Model.DonGia)</span>
+                        </div>
+                    </div>
+                </div>
+                <!--/INFO TEXT-->
+            </div>
+            <!--/INFO-->
+        </div>
+        <!--/SECTION-->
+        <!--SECTION-->
+        <div class="section">
+            <!--SLIDER CONTENT-->
+            <div class="slider-content">
+                <!--SLIDER COL-->
+                <div class="slider-overlay">
+                    <!--SHARE-PRODUCT-->
+                    <div class="scl-product">
+                        <span>share</span>
+                        <ul>
+                            <li class="scl-pro-facebook"><a target="_blank" href="http://www.facebook.com/sharer.php?url=~/Home/Details/@Model.IdSanPham">facebook</a></li>
+                            <li class="scl-pro-google"><a target="_blank" href="https://plus.google.com/share?url=~/Home/Details/@Model.IdSanPham">google</a></li>
+                        </ul>
+                    </div>
+                        
+                   
+                    <!--/SHARE-PRODUCT-->
+                    <!--SLIDER BOX-->
+                    <div class="slider-box">
+                        <!--COL-->
+                        <div class="slider-col">
+                            <!--SLIDER-->
+                            <div class="slider-product" data-id="2328">
+                                <div class="product-pic"><a href="" class="zoom"></a><img class="lazyload" src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@Model.HinhAnh" alt="@Model.TenSanPham"></div>
+                                </div>
+                            <!--/SLIDER-->
+                            <!--NAV-->
+                            <div class="col-nav" data-nav="2328" style="width: 50px; height: 50px">
+                                <ul>
+                                   
+                                </ul>
+                            </div>
+                            <!--/NAV-->
+                        </div>
+                        <!--/COL-->
+                    </div>
+                    <!--SLIDER BOX-->
+                </div>
+                <!--/SLIDER COL-->
+                <!--SLIDER-NAV-->
+                <div class="slider-nav">
+                    
+                   <a href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = Model.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i> Thêm giỏ hàng</a>
+</div>
+                <!--/SLIDER-NAV-->
+            </div>
+            <!--/SLIDER CONTENT-->
+        </div>
+        <!--/SECTION-->
+        <!--SECTION-->
+        <div class="section">
+            <div class="logo-product"><img src="~/pictures/catalog/products/sneakers/bage-icon.png" alt="@Model.TenSanPham"></div><div class="size-product">
+                <span>Size</span>
+                <img src="~/pictures/catalog/products/sneakers/sizechuan.png" alt="@Model.TenSanPham">
+            </div>
+        </div>
+        <!--/SECTION-->
+    </div>
+    <!--SECTION-->
+    <div class="section group-link">
+        <div class="section-title"><h2>You might like</h2></div>
+        <!--GROUP-SLIDER-->
+        <div class="section-box">
+            <!--GROUP-BOX-->
+            <div class="group-slider">
+
+                @foreach (var item in ViewBag.SP_cungloai)
+                {
+                    <div class="product-box">
+                        <div class="icon-new"></div><div class="slider">
+                            <div class="slider-item"><img class="lazyload" src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        </div>
+                        <div class="product-text">
+                            <h3>@item.TenSanPham</h3>
+
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+                          
+                        </div>
+                    </div>}
+
+     
+
+            </div>
+            <!--/GROUP-BOX-->
+        </div>
+        <!--/GROUP-SLIDER-->
+    </div>
+    <!--/SECTION-->
+    <!--SECTION-->
+    <div class="section">
+        <div class="go-to-list">
+            <a onclick="goBack()" >Back </a>
+
+            <script>
+function goBack() {
+    window.history.back();
+}
+            </script>
+        </div>
+    </div>
+    <!--/SECTION-->
+</div>

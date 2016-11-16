@@ -1,0 +1,179 @@
+﻿<!DOCTYPE HTML>
+<html lang="vi">
+
+<!-- Mirrored from www.converse.com.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2016 06:40:34 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title id="hdtitle">@ViewBag.Title</title>
+    <meta name="Description" content="Su Store" />
+    <meta name="keywords" content="Su Store" />
+    <meta name="author" content="Su Store">
+    <meta property="og:url" content="~/Home/Index">
+    <meta property="og:title" content="Su Store">
+    <meta property="og:image" content="~/Content/images/social-share.png">
+    <meta property="og:description" content="Su Store">
+    <meta property="og:site_name" content="Su Store">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="vi_VN">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="SHORTCUT ICON" href="~/Content/images/favicon.ico">
+    <link href="~/catalog/view/theme/default/css/style.css" rel="stylesheet" type="text/css">
+
+    <link href="~/catalog/view/theme/default/css/validationEngine.jquery.css" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0; url=http://www.converse.com.vn/detect.html" />
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    window.top.location = 'http://www.converse.com.vn/detect.html';
+    /* ]]> */
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/jquery.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/common.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/scroll.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/grid.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/slide.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/load.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/validate.js"></script>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/jquery.validationEngine.js"></script>
+   </head>
+<body>
+    <!--LOAD-PAGE-->
+    <div class="all-pics"></div>
+    <div class="all-album"></div>
+    <div class="allvideo"></div>
+    <div class="overlay-album"></div>
+    <div class="overlay-video"></div>
+    <div class="overlay-dark"></div>
+    <!--LOAD-PAGE-->
+    <div class="nav-click"><span></span></div>
+    <!--LANGUAGE SP-->
+    <div class="language-sp">
+    </div>
+    <!--LANGUAGE SP--><!--LOGO-->
+    <div class="logo"><a href="@Url.Action("Index","Home")"><img src="~/Content/Giay/logo.png" alt="Su Store"></a></div>
+    <!--LOGO-->
+    <!--HEADER-->
+    <div class="header">
+        <div class="top">
+            <!--RIGHT-->
+            <div class="right">
+                <!--SEARCH-->
+                <div class="search-box">
+                    <a href="@Url.Action( "Search", "Home", new {txttimkiem = "xxx"})" class="link">
+                        <img src="~/catalog/view/theme/default/images/search.png" style="margin-top:5px" />
+                    </a>
+                    <div class="search-form show" style="width:300px">
+                        <div class="form-row-search">
+                            <input type="text" name="IP" id="IP" value="" placeholder="Tìm sản phẩm" class="search-field active" />
+                            <script>
+                                            $(function () {
+                                                $('.link').click(function () {
+                                                    var ipvalue = $("#IP").val();
+
+                                                        this.href = this.href.replace("xxx", ipvalue);
+
+                                                });
+                                            });
+                            </script>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--SEARCH--><!--LANGUAGE-->
+                <div class="language">
+                </div>
+                <!--LANGUAGE-->
+            </div>
+            <!--/RIGHT-->
+            <!--NAVIGATION-->
+            @{Html.RenderAction("menutop", "Home");}
+            <!--/NAVIGATION-->
+        </div>
+    </div>
+    <!--/HEADER-->
+    <!--CONTAINER-->
+    <div class="container" id="products-page">
+        <div id="win-scroll">
+            <!--SLIDER-->
+            <div class="slider-inner" data-time="5000">
+                <div class="slide-bg-inner">
+                    <div class="bg-inner">
+                        <img src="~/pictures/catalog/background/for-men.jpg" alt="Sneakers">
+                    </div>
+                </div>
+            </div>
+            <!--/SLIDER-->
+            <!--CONTENT-->
+            <div>@RenderBody()</div>
+            <!--/POPULAR-CONTENT-LIST-->
+        </div>
+        <!--/SECTION-->
+        <!--SECTION-->
+        <!--/SECTION-->
+    </div>
+    <!--/CONTENT-->
+    <!--BOTTOM-->
+    <div class="section bottom">
+        <!--BOTTOM-COLS-->
+        <div class="bottom-col">
+            <div class="logo-bottom"><a href="@Url.Action("Index","Home")"></a></div>
+            <!--NAV-->
+            <div class="col" data-show="97">
+                        <h3>Classic</h3>
+                        <ul>
+                            <li><a href="women/new.html" data-cate="167">New</a></li>
+                            <li><a href="women/sale.html" data-cate="168">Sale</a></li>
+                            <li><a href="women/collection.html" data-cate="169">Collection</a></li>
+                        </ul>
+                    </div>
+                    <div class="col" data-show="92">
+                        <h3>Chuck II Taylor</h3>
+                        <ul>
+                            <li><a href="men/new-1.html" data-cate="241">New</a></li>
+                            <li><a href="men/sale-1.html" data-cate="242">Sale</a></li>
+                            <li><a href="men/collection-1.html" data-cate="243">Collection</a></li>
+                        </ul>
+                    </div>
+                    <div class="col" data-show="245">
+                        <h3>Balo</h3>
+                        <ul>
+                            <li><a href="kids/new-2.html" data-cate="251">New</a></li>
+                            <li><a href="kids/sale-2.html" data-cate="252">Sale</a></li>
+                        </ul>
+                    </div>
+                    <div class="col show-page">
+                        <h3><a class="" href="news.html">News</a></h3>
+
+                        <h3><a class="" href="about.html">About</a></h3>
+                    </div><!--/NAV-->
+            <!--SOCIALS-->
+            <div class="col social">
+                <ul>
+                    <li><a href="https://plus.google.com/" target="_blank" class="google">gp</a></li>
+                    <li><a href="https://www.facebook.com/converse.vietnam/" target="_blank" class="facebook">fb</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank" class="youtube">yt</a></li>
+                </ul>
+            </div>
+            <!--SOCIALS-->
+        </div>
+        <!-- BOTTOM-COLS-->
+        <div class="copyright"><p>2016  ©  <strong>Converse VIETNAM</strong>. All rights reserved.  <a href="http://www.btq.vn/" target="_blank">DEVELOPED BY 3GRAPHIC</a></p></div>
+    </div>
+    <!--BOTTOM-->
+    <!--/CONTAINER-->
+    <div class="httpserver class-hidden">http://www.converse.com.vn/</div>
+    <div class="httptemplate class-hidden">http://www.converse.com.vn/catalog/view/theme/</div>
+    <div class="overlay-menu"></div>
+    <div class="go-top"></div>
+    <div class="scroll-down"></div>
+    <script type="text/javascript" src="~/catalog/view/theme/default/js/btq.js"></script>
+</body>
+
+<!-- Mirrored from www.converse.com.vn/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Nov 2016 06:48:15 GMT -->
+</html>

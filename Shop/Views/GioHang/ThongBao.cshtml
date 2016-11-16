@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Thông Báo";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="section">
+    <div class="section-title"><h1>@ViewBag.Title</h1></div>
+</div>
+<div class="section">
+
+    <div class="container">
+        <div class="cart-items">
+            <div class="in-check">
+                <div class="container">
+                    <h2 style="color:#000000;font-weight:bold"> Sản phẩm đã hết hàng. Vui lòng chọn sản phẩm khác. </h2>
+                    <br />
+                    <h2> <a href="@Url.Action("Index","Home")" style="color:#000000;text-align:center;font-weight:bold"> Trở lại trang chủ để mua hàng.</a></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

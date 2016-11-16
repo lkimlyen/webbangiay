@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Shop.Models.SanPham>
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="section-box popular-list">
+    <div class="popular-content-wrap">
+        <!--POPULAR-COL-->
+        <div class="popular-col">
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.ChuckII)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+                            <a href="@Url.Action("Details","Home",new { id= item.IdSanPham})" data-cate="1291" data-show="1291"></a>
+                        </div>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                       
+                </div>
+                }
+
+            </div>
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.Chuck)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+
+                        </div>
+                        <a href="@Url.Action("Details","Home",new { id= item.IdSanPham})" data-cate="1291" data-show="1291"></a>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+        <!--/POPULAR-COL-->
+        <!--POPULAR-COL-->
+        <div class="popular-col">
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.Classic)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+
+                        </div>
+                        <a href="@Url.Action("Details", "Home", new { id = item.IdSanPham })" data-cate="1291" data-show="1291"></a>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.CVClassic)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+
+                        </div>
+                        <a href="@Url.Action("Details", "Home", new { id = item.IdSanPham })" data-cate="1291" data-show="1291"></a>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+        <!--/POPULAR-COL-->
+        <!--POPULAR-COL-->
+        <div class="popular-col">
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.Balo)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+
+                        </div>
+                        <a href="@Url.Action("Details", "Home", new { id = item.IdSanPham })" data-cate="1291" data-show="1291"></a>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+            <div class="popular-col-wrap">
+                @foreach (var item in ViewBag.BaloCV)
+                {
+                    <div class="popular-box">
+                        <div class="popular-box-pic"><img src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                        <div class="popular-box-text">
+                            <h3>@item.TenSanPham</h3>
+                            <div class="price">
+                                <sub>VND</sub>
+                                <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                            </div>
+
+                        </div>
+                        <a href="@Url.Action("Details", "Home", new { id = item.IdSanPham })" data-cate="1291" data-show="1291"></a>
+                        <div class="note">
+                            <a class="note" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+
+        <!--/POPULAR-COL-->
+    </div>
+</div>

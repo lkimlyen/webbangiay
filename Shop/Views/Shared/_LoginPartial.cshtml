@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Session["Email"] != null)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a>Xin chào, @Session["emailstring"]</a></li>
+        <li>@Html.ActionLink("Log out", "Logout", "User", routeValues: null, htmlAttributes: new { id = "logoutLink" })</li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Register", "Register", "User", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "User", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

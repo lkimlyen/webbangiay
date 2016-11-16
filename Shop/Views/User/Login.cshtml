@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div class="section">
+    <div class="section-title"><h1>@ViewBag.Title</h1></div>
+</div>
+<div class="section">
+    
+    <div class="row">
+
+        <div class="col-md-10">
+            <div id="loginForm" class="center-text">
+                @using (Html.BeginForm())
+            {
+                    <hr />
+                    <div class="form-group" style="margin-left: 300px">
+                        <label class="col-md-2 control-label">Email: </label>
+
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" required="required" id="Email" name="Email" style="width: 300px" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="clearfix"> </div>
+                            <div class="form-group center-block" style="margin-left: 300px">
+                                <label class="col-md-2 control-label">Password: </label>
+
+                                <div class="col-md-10">
+                                    <input type="password" class="form-control" required="required" id="Password" name="Password" style="width: 300px" />
+                                </div>
+
+                            </div>
+                            <br />
+                            <div class="clearfix"> </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2">
+                                    <input type="submit" value="Login" name="login" class="btn btn-default" />
+                                    @Html.ActionLink("Register as a new user", "Register")
+                                </div>
+                            </div>
+                            
+                }
+            </div>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Shop.Models.SanPham>
+@{
+    ViewBag.Title = ViewBag.TenLoai;
+    Layout = "~/Views/Shared/_LayoutProduct.cshtml";
+}
+<div class="content-page">
+    <!--SECTION-->
+    <div class="section product-list">
+        <div class="section-title"><h1>@ViewBag.TenLoai</h1></div>
+    </div>
+    <div class="section">
+        <div class="product-nav">
+            <ul>
+                <li class="current"><a href="" >All Star</a></li>
+                </ul>
+        </div>
+    </div>
+
+    <!--/SECTION-->
+    <!--SECTION-->
+    <div class="section">
+        <div class="section-box content-slider">
+            @foreach (var item in Model)
+            {
+                <div class="product-box">
+                    <div class="icon-new"></div><div class="slider">
+                        <div class="slider-item"><img class="lazyload" src="~/pictures/catalog/products/sneakers/chuck-taylor-all-star/@item.HinhAnh" alt="@item.TenSanPham"></div>
+                    </div>
+                    <div class="product-text">
+                        <h3>@item.TenSanPham</h3>
+
+                        <div class="price">
+                            <sub>VND</sub>
+                            <span class="sale-price">@string.Format("{0:#,##0}", item.DonGia)</span>
+                        </div>
+                        <a class="link-direct" href="@Url.Action("Details","Home", new {id = item.IdSanPham })">xem</a>
+                    </div>
+                    <div class="product-cart">
+                        <a class="product-cart" href="@Url.Action("ThemGioHang", "GioHang", new { @IdSanPham = item.IdSanPham, @strUrl= Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i>Thêm giỏ hàng</a>
+                    </div>
+               
+                  </div>
+            }
+        </div>
+    </div>
+    <!--/SECTION-->
+</div>
+
+

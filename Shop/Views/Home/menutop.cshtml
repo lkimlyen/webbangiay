@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Shop.Models.LoaiSanPham>
+<div class="navigation">
+    <!--NAV-->
+    <div class="nav">
+        <ul>
+            @foreach (var item in Model)
+            {
+            <li class="">
+                <a  href="@Url.Action("ProductType","Home",new {id = item.IdLoaiSanPham })" ><span></span>@item.BiDanh</a>
+
+            </li>
+            }
+            <li class=""><a href="@Url.Action("News","Home")">News</a></li>
+          
+            <li class=""><a href="@Url.Action("LienHe","Home")">Liên hệ</a></li>
+            <li class="">@Html.Action("GioHangPartial", "GioHang")</li>
+        </ul>
+    </div>
+    <!--/NAV-->
+    <!--SUB-MENU-->
+    <!--/SUB-MENU-->
+</div>
+
